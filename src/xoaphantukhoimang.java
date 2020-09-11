@@ -18,23 +18,27 @@ public class xoaphantukhoimang {
         System.out.println("nhap so can xoa: " );
         int num = input.nextInt();
         int index=0;
+        boolean check =false;
         for(int j=0; j< array.length; j++) {
             if(array[j] == num) {
                 index =j;
+                check= true;
             }
         }
+        if(!check){
+            System.out.println(num + "phan tu khong thuoc mang");
+        }else {
+            for (int j = index; j < array.length - 1; j++) {
+                array[j] = array[j + 1];
+                if ((j + 1) == (array.length - 1)) {
+                    array[array.length - 1] = 0;
+                }
 
-        for ( int j = index ; j< array.length-1;j++) {
-            array[j]=array[j+1];
-            if((j+1) == (array.length-1 )) {
-                array[array.length - 1] = 0;
             }
-
+            System.out.print("mang sau khi xoa: ");
+            for (int j = 0; j < array.length; j++) {
+                System.out.print(array[j] + "\t");
+            }
         }
-        System.out.print("mang sau khi xoa: ");
-        for(int j=0; j< array.length; j++){
-            System.out.print(array[j] +"\t");
-        }
-
     }
 }
