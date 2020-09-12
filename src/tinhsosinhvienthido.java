@@ -24,7 +24,7 @@ public class tinhsosinhvienthido {
         }
         System.out.print("danh sach diem cua hoc sinh la: ");
         for(int i=0; i< array.length;i++){
-            if(array[i]>=5){
+            if(array[i]>=5 ){
                 count++;
             }
             System.out.print(array[i] + "\t");
